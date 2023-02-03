@@ -1,7 +1,7 @@
-const { contextBridge } = require('electron')
+const { contextBridge } = require('electron');
 
-contextBridge.xposeInMainWorld('versions', {
+contextBridge.exposeInMainWorld('versions', {
     node: () => process.versions.node,
-    chrome: () => proceso.ersions.chrome,
+    chrome: () => process.versions.chrome,
     electron: () => process.versions.electron,
-})
+});
